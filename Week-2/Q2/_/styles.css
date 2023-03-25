@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+}
+
+.outer {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color: aquamarine;
+  height: 200px;
+  width: 200px;
+  flex-wrap: wrap;
+  z-index: -1;
+}
+
+#app {
+  width: 100px;
+  height: 100px;
+  z-index: 3;
+}
+
+#app:nth-child(1) {
+  background-color: blue;
+}
+#app:nth-child(2) {
+  background-color: red;
+}
+#app:nth-child(3) {
+  background-color: yellowgreen;
+}
+#app:nth-child(4) {
+  background-color: violet;
+}
+
+.outer:hover #app:nth-child(1) {
+  transition-property: transform;
+  transform: rotate(90deg);
+  transform-origin: top left;
+  transition-duration: 1s;
+}
+
+.outer:hover #app:nth-child(2) {
+  transition-property: transform;
+  transform: rotate(-90deg);
+  transform-origin: top right;
+  transition-duration: 1s;
+}
+
+.outer:hover #app:nth-child(3) {
+  transition-property: transform;
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+  transition-duration: 1s;
+}
+
+.outer:hover #app:nth-child(4) {
+  transition-property: transform;
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+  transition-duration: 1s;
+}
+
+.main {
+  position: absolute;
+  margin-top: 100px;
+  z-index: 1;
+}

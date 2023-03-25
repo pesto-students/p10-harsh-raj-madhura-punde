@@ -1,0 +1,109 @@
+
+body{
+    background-color: #DDF7E3;
+}
+
+header{
+    text-align: center;
+    margin-top: 30px;
+}
+
+h1, h4{
+    color: #19A7CE;
+}
+
+header > h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}
+header > h3 {
+    margin-top: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+article, p{
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  fieldset{
+    border-color: #19A7CE;
+    border-style: solid;
+  }
+
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-weight: bold;
+    /* color:#19A7CE ; */
+
+}
+  /* Custome Class/Definitions */
+
+.wrapper{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+/* justify-content: space-evenly;
+align-items: stretch;
+flex-flow: row wrap; */
+
+}
+
+.sub-left{
+    width: 600px;
+    height: 700px;
+}
+
+.left-img{
+    margin-top: 10px;
+    width: 500px;
+    height: 400px;
+    border: 5px solid #19A7CE;
+}
+
+.sub-right{
+    /* flex: 3; */
+    width: 600px;
+    height: 850px;
+}
+.sub-right > article > h4{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.sub-right, p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+} 
+
+.wrapper-1{
+    display: flex;
+    justify-content: flex-start;
+    margin: 25px;
+}
+.form-filling{
+    width: 600px;
+    height: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper-1{
+        justify-content: center;
+    }
+    
+} 
+
+@media only screen and (max-width: 992px) {
+    .body{background: orange;}
+    
+  } 
