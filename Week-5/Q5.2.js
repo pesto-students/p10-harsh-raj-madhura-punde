@@ -6,29 +6,36 @@ Guidelines:
 2.Map’s set functionality should have been used.
 3.Bonus - if space and time complexity is taken care.   */
 
-function isVowel(char){
-    return"aeiou".includes(char);
-    }
-    
-    
-    function vowelCount(str){
-    
-        const vowelMap=newMap();
-     
-        for(let char of str){
-     
-     let lowerCaseChar=char.toLowerCase()
-     if(isVowel(lowerCaseChar)){
-     
-     if(vowelMap.has(lowerCaseChar)) {
-         vowelMap.set(lowerCaseChar,vowelMap.get(lowerCaseChar));
-     }
-     else{
-     vowelMap.set(lowerCaseChar,1);
-     }
-     }
-     }
-     return vowelMap;
-     }
-     
+const vowels = "aeiou";
+const str = "Madhura";
 
+function isVowel(char) {
+  return vowels.includes(char);
+}
+
+function vowelCount(str) {
+  const vowelMap = new Map();
+  
+  for (let value of str) {
+  
+    if (isVowel(value)) {
+    
+      if (vowelMap.has(value)) {
+      
+        vowelMap.set(value, vowelMap.get(value) + 1);
+        
+      } else {
+      console.log(value)
+      
+        vowelMap.set(value, 1);
+      }
+    }
+  }
+  return vowelMap;
+}
+
+
+let res = vowelCount(str)
+for (let s of res){
+console.log(s)
+}
